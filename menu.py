@@ -2,10 +2,13 @@ import os
 import random
 from smtplib import *
 import time
+import sqlite3
 
 
 pwd = os.path.join(os.getcwd(), "menu2.txt")
 file = open(pwd, 'r')
+dbfile = os.path.join(os.getcwd(), "db")
+conn = sqlite3.connect(dbfile)
 outStr = "we will eat this :\n"
 
 
